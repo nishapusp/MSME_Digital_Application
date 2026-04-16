@@ -1,0 +1,30 @@
+# ─────────────────────────────────────────────────────────────
+# MSME Loan Application Portal — Union Bank of India
+# Requirements File
+# Install with:  pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────
+
+# Web framework
+streamlit>=1.32.0
+
+# PDF parsing (reading Udyam / GST certificates)
+pdfplumber>=0.10.0
+
+# PDF generation (printable Annexure I output)
+reportlab>=4.0.0
+
+# Image handling (passport photos, document uploads)
+Pillow>=10.0.0
+
+# OCR for scanned/image-based certificates (optional but recommended)
+# Requires Tesseract engine installed separately:
+#   Windows : https://github.com/UB-Mannheim/tesseract/wiki
+#   Ubuntu  : sudo apt install tesseract-ocr tesseract-ocr-hin
+#   Mac     : brew install tesseract
+pytesseract>=0.3.10
+
+# Word document generation (management reports)
+python-docx>=1.1.0
+
+# PDF reading (used internally by pdfplumber)
+pypdf>=4.0.0
