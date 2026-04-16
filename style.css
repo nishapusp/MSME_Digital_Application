@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+html, body, [class*="css"] { font-family: 'Plus Jakarta Sans', sans-serif; }
+#MainMenu, footer, header { visibility: hidden; }
+.stDeployButton { display: none; }
+.block-container { padding-top: 0.3rem !important; max-width: 1100px !important; }
+
+/* ── Hero ──────────────────────────────────────────────────────── */
+.hero-wrap {
+    background: linear-gradient(135deg, #0f2444 0%, #1a3c6e 55%, #1d5fa5 100%);
+    border-radius: 16px; padding: 1.5rem 1.8rem 1.3rem;
+    margin-bottom: 1rem; position: relative; overflow: hidden;
+    box-shadow: 0 6px 28px rgba(15,36,68,0.32);
+}
+.hero-wrap::before { content:''; position:absolute; top:-50px; right:-50px; width:200px; height:200px; border-radius:50%; background:rgba(232,160,32,0.12); }
+.hero-bank { font-family:'Playfair Display',serif; font-size:1.35rem; font-weight:700; color:#fff; }
+.hero-tag { font-size:0.66rem; color:rgba(255,255,255,0.5); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:0.5rem; }
+.hero-title { font-size:1rem; font-weight:700; color:#fff; margin-bottom:0.2rem; }
+.hero-sub { font-size:0.76rem; color:rgba(255,255,255,0.68); line-height:1.5; margin-bottom:0.6rem; }
+.hero-chips { display:flex; flex-wrap:wrap; gap:5px; }
+.hero-chip { background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.18); border-radius:20px; padding:3px 11px; font-size:0.65rem; color:rgba(255,255,255,0.82); font-weight:500; }
+.hero-chip.gold { background:rgba(232,160,32,0.22); border-color:rgba(232,160,32,0.45); color:#f5c842; }
+.appid-badge { font-size:0.63rem; color:rgba(255,255,255,0.35); font-family:'Courier New',monospace; margin-top:0.5rem; }
+
+/* ── Top Step Nav ──────────────────────────────────────────────── */
+.top-nav-outer {
+    background:#fff; border:1px solid #e4eaf5; border-radius:13px;
+    padding:7px 10px; margin-bottom:1.1rem;
+    overflow-x:auto; white-space:nowrap;
+    box-shadow:0 2px 7px rgba(0,0,0,0.04);
+    -webkit-overflow-scrolling:touch; scrollbar-width:none;
+}
+.top-nav-outer::-webkit-scrollbar { display:none; }
+.top-nav-inner { display:inline-flex; align-items:center; gap:2px; min-width:max-content; }
+.tnav-pill { display:inline-flex; align-items:center; gap:4px; padding:5px 10px; border-radius:9px; font-size:0.71rem; font-weight:600; white-space:nowrap; color:#9ca3af; transition:all 0.16s; }
+.tnav-pill.active { background:linear-gradient(135deg,#1a3c6e,#2563a8); color:#fff; box-shadow:0 2px 9px rgba(26,60,110,0.26); }
+.tnav-pill.done { color:#15803d; background:#f0fdf4; }
+.tnav-pill.incomplete { color:#b45309; background:#fef9c3; }
+.tnav-num { width:17px; height:17px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:0.58rem; font-weight:700; background:rgba(0,0,0,0.08); }
+.tnav-pill.active .tnav-num { background:rgba(255,255,255,0.22); }
+.tnav-pill.done .tnav-num { background:#15803d; color:#fff; }
+.tnav-pill.incomplete .tnav-num { background:#f59e0b; color:#fff; }
+.tnav-sep { color:#d1d5db; font-size:0.75rem; padding:0 1px; }
+.nav-scroll-hint { font-size:0.64rem; color:#9ca3af; text-align:right; margin-top:-8px; margin-bottom:6px; }
+@media (max-width:768px) { .nav-scroll-hint { display:block; } }
+
+/* ── Section Card ──────────────────────────────────────────────── */
+.scard { background:#fff; border:1px solid #e8edf5; border-radius:13px; padding:1.1rem 1.3rem; margin-bottom:0.85rem; box-shadow:0 1px 5px rgba(0,0,0,0.033); }
+.scard-head { font-size:0.86rem; font-weight:700; color:#1a3c6e; margin-bottom:0.85rem; padding-bottom:7px; border-bottom:2px solid #eef2fa; display:flex; align-items:center; gap:6px; }
+.scard-head .sbadge { margin-left:auto; background:#eef2fa; color:#1a3c6e; border-radius:20px; padding:2px 9px; font-size:0.61rem; font-weight:600; }
+.scard-head .sbadge.ok { background:#dcfce7; color:#15803d; }
+.scard-head .sbadge.warn { background:#fef9c3; color:#854d0e; }
+
+/* ── Upload Card (large — Step 0) ─────────────────────────────── */
+.doc-card {
+    background:linear-gradient(145deg,#f8faff,#eef4ff);
+    border:2px dashed #b8cff5; border-radius:14px;
+    padding:1.1rem 1rem; text-align:center; transition:all 0.22s;
+}
+.doc-card:hover { border-color:#2563a8; background:linear-gradient(145deg,#eef4ff,#dbeafe); transform:translateY(-2px); box-shadow:0 6px 20px rgba(37,99,168,0.11); }
+.doc-card.parsed { border-style:solid; border-color:#22c55e; background:linear-gradient(145deg,#f0fdf4,#dcfce7); }
+.doc-icon-lg { font-size:2.4rem; margin-bottom:6px; }
+.doc-name { font-size:0.85rem; font-weight:700; color:#1a3c6e; margin-bottom:3px; }
+.doc-hint { font-size:0.67rem; color:#6b7280; line-height:1.4; margin-bottom:7px; }
+.doc-tags { display:flex; flex-wrap:wrap; gap:3px; justify-content:center; margin-bottom:6px; }
+.doc-tag { background:#dbeafe; color:#1e40af; border-radius:10px; padding:1px 7px; font-size:0.59rem; font-weight:600; }
+.parsed-stamp { background:#22c55e; color:#fff; border-radius:20px; padding:3px 13px; font-size:0.68rem; font-weight:700; display:inline-block; margin-top:4px; }
+
+/* ── Compact inline upload (director PAN/Aadhaar) ─────────────── */
+.compact-upload-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f5f8ff;
+    border: 1.5px dashed #a8c0e0;
+    border-radius: 10px;
+    padding: 6px 10px;
+    margin-top: 4px;
+    transition: all 0.18s;
+}
+.compact-upload-row:hover { border-color: #2563a8; background: #eef4ff; }
+.compact-upload-row.done { border-style: solid; border-color: #22c55e; background: #f0fdf4; }
+.compact-icon { font-size: 1.1rem; flex-shrink: 0; }
+.compact-label { font-size: 0.7rem; font-weight: 600; color: #374151; flex: 1; line-height: 1.3; }
+.compact-parsed { font-size: 0.63rem; color: #15803d; font-weight: 700; }
+
+/* ── Parsing spinner overlay ───────────────────────────────────── */
+.parsing-badge {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: #eff6ff; border: 1px solid #bfdbfe;
+    border-radius: 20px; padding: 3px 12px;
+    font-size: 0.69rem; color: #1d4ed8; font-weight: 600;
+    animation: pulse 1.2s infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.6} }
+
+/* ── Field States ──────────────────────────────────────────────── */
+.val-ok  { color:#15803d; font-size:0.69rem; font-weight:600; margin-top:1px; }
+.val-err { color:#dc2626; font-size:0.69rem; font-weight:600; margin-top:1px; }
+.autofill-pill { display:inline-flex; align-items:center; gap:3px; background:#eff6ff; border:1px solid #bfdbfe; border-radius:20px; padding:2px 8px; font-size:0.62rem; color:#1d4ed8; font-weight:600; margin-bottom:3px; }
+
+/* ── Banners ───────────────────────────────────────────────────── */
+.info-banner { background:#eff6ff; border-left:4px solid #2563a8; border-radius:0 10px 10px 0; padding:8px 13px; font-size:0.78rem; color:#1e40af; line-height:1.5; margin-bottom:0.75rem; }
+.warn-banner { background:#fffbeb; border-left:4px solid #f59e0b; border-radius:0 10px 10px 0; padding:8px 13px; font-size:0.78rem; color:#92400e; margin-bottom:0.75rem; }
+.success-banner { background:#f0fdf4; border-left:4px solid #22c55e; border-radius:0 10px 10px 0; padding:8px 13px; font-size:0.78rem; color:#14532d; margin-bottom:0.75rem; }
+
+/* ── Loan Bar ──────────────────────────────────────────────────── */
+.loan-bar { background:linear-gradient(135deg,#1a3c6e,#2563a8); color:#fff; border-radius:11px; padding:11px 16px; display:flex; justify-content:space-between; align-items:center; margin:5px 0; }
+.loan-bar-lbl { font-size:0.72rem; opacity:0.76; }
+.loan-bar-val { font-size:1.25rem; font-weight:800; }
+
+/* ── Metric Row ────────────────────────────────────────────────── */
+.mrow { display:flex; gap:9px; flex-wrap:wrap; margin-bottom:0.9rem; }
+.mbox { flex:1; min-width:100px; background:#f8faff; border:1px solid #e0e8f8; border-radius:10px; padding:9px 11px; }
+.mbox-lbl { font-size:0.62rem; color:#6b7280; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:2px; }
+.mbox-val { font-size:0.95rem; font-weight:700; color:#1a3c6e; }
+.mbox-val.green { color:#15803d; }
+.mbox-val.amber { color:#d97706; }
+
+/* ── Declaration ───────────────────────────────────────────────── */
+.decl-box { background:#f8faff; border:1.5px solid #c7d9f5; border-radius:12px; padding:1.1rem 1.3rem; font-size:0.79rem; line-height:1.7; color:#374151; margin-bottom:0.8rem; }
+.decl-box ul { padding-left:15px; margin:5px 0; }
+.decl-box li { margin-bottom:4px; }
+
+/* ── Streamlit overrides ───────────────────────────────────────── */
+.stTextInput>div>div>input,.stTextArea>div>div>textarea {
+    border:1.5px solid #d1dae8 !important; border-radius:9px !important;
+    font-size:0.83rem !important; background:#fbfcff !important;
+    font-family:'Plus Jakarta Sans',sans-serif !important; transition:all 0.15s !important;
+}
+.stTextInput>div>div>input:focus,.stTextArea>div>div>textarea:focus {
+    border-color:#2563a8 !important; background:#fff !important;
+    box-shadow:0 0 0 3px rgba(37,99,168,0.09) !important;
+}
+.stSelectbox>div>div { border:1.5px solid #d1dae8 !important; border-radius:9px !important; background:#fbfcff !important; font-size:0.83rem !important; }
+label,.stTextInput label,.stSelectbox label,.stTextArea label,.stDateInput label,.stFileUploader label,.stNumberInput label {
+    font-size:0.72rem !important; font-weight:600 !important; color:#374151 !important;
+}
+/* Hide default file uploader label when we use label_visibility=collapsed */
+.stFileUploader > label { display:none !important; }
+/* Primary button */
+.stButton>button[kind="primary"] {
+    background:linear-gradient(135deg,#0f2444,#1a3c6e,#2563a8) !important;
+    color:#fff !important; border:none !important; border-radius:10px !important;
+    font-weight:700 !important; font-size:0.83rem !important;
+    box-shadow:0 3px 11px rgba(26,60,110,0.22) !important;
+    font-family:'Plus Jakarta Sans',sans-serif !important; transition:all 0.17s !important;
+}
+.stButton>button[kind="primary"]:hover { transform:translateY(-1px) !important; box-shadow:0 5px 16px rgba(26,60,110,0.28) !important; }
+/* Secondary */
+.stButton>button:not([kind="primary"]) {
+    border:1.5px solid #d1dae8 !important; border-radius:10px !important;
+    background:#fff !important; color:#374151 !important;
+    font-size:0.82rem !important; font-weight:600 !important;
+    font-family:'Plus Jakarta Sans',sans-serif !important; transition:all 0.13s !important;
+}
+.stButton>button:not([kind="primary"]):hover { border-color:#2563a8 !important; color:#1a3c6e !important; background:#f0f6ff !important; }
+/* Expander */
+.streamlit-expanderHeader { background:#f5f7fc !important; border-radius:10px !important; font-weight:700 !important; font-size:0.81rem !important; color:#1a3c6e !important; border:1px solid #e8edf5 !important; }
+.streamlit-expanderContent { border:1px solid #e8edf5 !important; border-top:none !important; border-radius:0 0 10px 10px !important; }
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] { background:#f0f4fa; border-radius:11px; padding:3px; gap:4px; }
+.stTabs [data-baseweb="tab"] { border-radius:8px !important; font-weight:600 !important; font-size:0.79rem !important; }
+.stTabs [aria-selected="true"] { background:linear-gradient(135deg,#1a3c6e,#2563a8) !important; color:#fff !important; }
+/* Sidebar */
+section[data-testid="stSidebar"] { background:linear-gradient(180deg,#0a1628,#0f2444,#1a3c6e) !important; }
+section[data-testid="stSidebar"] .stMarkdown { color:#b0c4de !important; }
+section[data-testid="stSidebar"] .stButton>button { background:rgba(255,255,255,0.05) !important; border:1px solid rgba(255,255,255,0.12) !important; color:#b0c4de !important; font-size:0.74rem !important; border-radius:7px !important; }
+section[data-testid="stSidebar"] .stButton>button:hover { background:rgba(255,255,255,0.1) !important; color:#fff !important; }
+/* File uploader — compact */
+.stFileUploader>div { border:1.5px dashed #a8c0e0 !important; border-radius:10px !important; background:#f5f8ff !important; transition:all 0.16s !important; }
+.stFileUploader>div:hover { border-color:#2563a8 !important; background:#eef4ff !important; }
+/* Small file uploader override for inline use */
+.compact-uploader .stFileUploader>div { padding:4px 8px !important; min-height:36px !important; }
+.compact-uploader .stFileUploader>div>div { min-height:28px !important; }
+/* Progress */
+.stProgress>div>div>div>div { background:linear-gradient(90deg,#1a3c6e,#2563a8,#e8a020) !important; }
+/* Checkbox */
+.stCheckbox>label { font-size:0.84rem !important; font-weight:600 !important; color:#1a3c6e !important; }
+/* Download */
+.stDownloadButton>button { background:linear-gradient(135deg,#14532d,#15803d) !important; color:#fff !important; border:none !important; border-radius:10px !important; font-weight:700 !important; width:100% !important; box-shadow:0 3px 11px rgba(21,128,61,0.26) !important; }
+.stDownloadButton>button:hover { transform:translateY(-1px) !important; }
+hr { border-color:#e8edf5 !important; margin:0.75rem 0 !important; }
+.stInfo,.stSuccess,.stWarning,.stError { border-radius:10px !important; font-size:0.79rem !important; }
+[data-testid="metric-container"] { background:#f0f6ff !important; border:1px solid #c7d9f5 !important; border-radius:11px !important; }
+[data-testid="metric-container"] [data-testid="stMetricValue"] { color:#1a3c6e !important; font-weight:700 !important; }
+.stRadio>div { gap:10px !important; }
+
+/* ── Machine table (replaces nested expanders) ─────────────────── */
+.machine-row {
+    background:#f8faff; border:1px solid #e0e8f8;
+    border-radius:10px; padding:10px 14px; margin-bottom:8px;
+}
+.machine-row-head { font-size:0.78rem; font-weight:700; color:#1a3c6e; margin-bottom:8px; display:flex; justify-content:space-between; }
