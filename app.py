@@ -14,7 +14,7 @@ from datetime import datetime, date
 from PIL import Image
 
 st.set_page_config(
-    page_title="MSME Loan Portal — Union Bank of India",
+    page_title="MSME Loan Portal — Bharat Bank of india",
     page_icon="🏦", layout="wide",
     initial_sidebar_state="collapsed",
 )
@@ -336,7 +336,7 @@ if ss.step==0:
     <div class="hero-wrap">
       <div style="display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap;">
         <div style="flex:1;min-width:230px;">
-          <div class="hero-bank">🏦 Union Bank of India</div>
+          <div class="hero-bank">🏦 Bharat Bank of India</div>
           <div class="hero-tag">MSME Credit Portal · Digital Application Form</div>
           <div class="hero-title">MSME Loan Application</div>
           <div class="hero-sub">Upload your registration certificates — fields fill automatically. Or skip and fill manually throughout.</div>
@@ -770,7 +770,7 @@ elif ss.step==3:
                 fac["repayment"]=st.text_input("Repayment Terms",fac["repayment"],key=f"{k}rep",placeholder="e.g. 60 EMIs / Revolving")
 
     st.markdown('</div>',unsafe_allow_html=True)
-    ss.cif_no=st.text_input("CIF No. (if existing Union Bank customer)",ss.cif_no,placeholder="Customer ID / CIF Number",key="cif_inp")
+    ss.cif_no=st.text_input("CIF No. (if existing Bharat Bank customer)",ss.cif_no,placeholder="Customer ID / CIF Number",key="cif_inp")
     st.markdown('<div class="warn-banner">📌 By proceeding you certify that no loans exist from any Bank/FI other than those listed above.</div>',unsafe_allow_html=True)
 
     c1,c2=st.columns(2)
@@ -1079,7 +1079,7 @@ elif ss.step==8:
     st.markdown("### 📊 Credit Bureau Consent")
     st.markdown('<div class="info-banner">The Bank requires consent to access credit information from Credit Information Companies (CICs) for evaluating this loan application.</div>',unsafe_allow_html=True)
     ss.cibil_consent=st.checkbox(
-        "✅ I/We consent to Union Bank of India accessing our Credit Information Report from **CIBIL (TransUnion)** for this MSME loan application.",
+        "✅ I/We consent to Bharat Bank of India accessing our Credit Information Report from **CIBIL (TransUnion)** for this MSME loan application.",
         value=ss.cibil_consent,key="cibil_cb"
     )
     ss.cibil_equifax_consent=st.checkbox(
